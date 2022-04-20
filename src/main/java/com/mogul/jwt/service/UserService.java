@@ -41,6 +41,7 @@ public class UserService {
         adminUser.setLastName("Admin");
         adminUser.setPassword("admin@pass");
         Set<Role> adminRoles = new HashSet<>();
+        adminUser.setRole(adminRoles);
         adminRoles.add(adminRole);
         userDao.save(adminUser);
 
@@ -51,6 +52,7 @@ public class UserService {
         user.setLastName("User");
         user.setPassword("user@pass");
         Set<Role> userRoles = new HashSet<>();
+        user.setRole(userRoles);
         userRoles.add(userRole);
         userDao.save(user);
     }
