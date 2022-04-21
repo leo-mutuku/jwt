@@ -24,11 +24,11 @@ public class UserController {
         return userService.registerNewUser(user);
     }
 
-    @GetMapping({"forAdmin"})
+    @GetMapping({"/forAdmin"})
     public String forAdmin(){
         return  "This url is for admin ";
     }
-
+    @GetMapping({"/forUser"})
     public String forUser(){
         return "This url is for user";
     }
